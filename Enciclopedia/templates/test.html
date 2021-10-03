@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Enciclopedia de Animales </title>
+    <title> Enciclopedia de Animales | Test</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -184,6 +185,7 @@
         }
 
         .sidebar .profile #log_out {
+            cursor: pointer;
             position: absolute;
             top: 50%;
             right: 0;
@@ -197,6 +199,7 @@
         }
 
         .sidebar.open .profile #log_out {
+            cursor: pointer;
             width: 50px;
             background: none;
         }
@@ -204,7 +207,6 @@
         .home-section {
             position: relative;
             background: #E4E9F7;
-            min-height: 100vh;
             top: 0;
             left: 78px;
             width: calc(100% - 78px);
@@ -225,199 +227,257 @@
             margin: 18px
         }
 
+        .upload {
+            display: grid;
+            height: 90vh;
+            place-items: center;
+            text-align: center;
+            padding-top: 80px;
+            background-color: #E4E9F7;
+        }
+
+        .container {
+            margin-top: -120px;
+            height: 350px;
+            width: 430px;
+            position: relative;
+        }
+
+        .container .wrapper {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            border-radius: 10px;
+            background: #fff;
+            border: 2px dashed #c2cdda;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .wrapper.active {
+            border: none;
+        }
+
+        .wrapper .image {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wrapper img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .wrapper .icon {
+            font-size: 100px;
+            color: #9658fe;
+        }
+
+        .wrapper .text {
+            font-size: 20px;
+            font-weight: 500;
+            color: #5b5b7b;
+        }
+
+        .wrapper #cancel-btn i {
+            position: absolute;
+            font-size: 20px;
+            right: 15px;
+            top: 15px;
+            color: #9658fe;
+            cursor: pointer;
+            display: none;
+        }
+
+        .wrapper.active:hover #cancel-btn i {
+            display: block;
+        }
+
+        .wrapper #cancel-btn i:hover {
+            color: #e74c3c;
+        }
+
+        .wrapper .file-name {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            padding: 8px 0;
+            font-size: 18px;
+            color: #fff;
+            display: none;
+            background: linear-gradient(135deg, #11101D 0%, #1d1a35 100%);
+        }
+
+        .wrapper.active:hover .file-name {
+            display: block;
+        }
+
+        .container #custom-btn {
+            margin-top: 30px;
+            display: block;
+            width: 100%;
+            height: 50px;
+            border: none;
+            outline: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            background: linear-gradient(135deg, #11101D 0%, #1d1a35 100%);
+        }
+
+        .container .btn,
+        .btn2 {
+            cursor: pointer;
+            margin-top: 15px;
+            width: 200px;
+            height: 40px;
+            font-size: 20px;
+            padding-top: 7px;
+            font-family: "Source Serif Pro", serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 25px;
+            letter-spacing: 1.2px;
+            color: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+            background-size: 600%;
+            -webkit-animation: anime 16s linear infinite;
+            animation: anime 16s linear infinite;
+        }
+
+        @keyframes anime {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         @media (max-width: 420px) {
             .sidebar li .tooltip {
                 display: none;
             }
         }
-
-        .container {
-            position: relative;
-            width: 800px;
-            min-width: 350px;
-            min-height: 250px;
-            padding-bottom: 40px;
-            overflow: hidden;
-            margin-left: 150px;
-        }
-
-        .wrapper {
-            width: 300%;
-            min-height: 100%;
-            display: flex;
-            justify-content: space-between;
-            transition: 1s;
-        }
-
-        .card {
-            width: 800px;
-            min-height: 100%;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            margin: 0 10px;
-        }
-
-        .card-thumb {
-            width: 70%;
-            height: 250px;
-            overflow: hidden;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            position: relative;
-        }
-
-        .client-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .client-name {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            border-top-left-radius: 50px;
-            border-bottom-left-radius: 50px;
-            padding: 5px 20px;
-            background: #fff;
-            text-transform: capitalize;
-            font-size: 14px;
-        }
-
-        .card-body {
-            width: 120%;
-            min-height: 100%;
-            height: auto;
-            margin-left: 20px;
-            position: relative;
-            padding-bottom: 50px;
-        }
-
-        .review {
-            font-size: 20px;
-            line-height: 30px;
-            margin-top: 30px;
-        }
-
-        .rating {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .star {
-            width: 25px;
-            margin-right: 5px;
-        }
-
-        .indicators {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .indicators button {
-            background: none;
-            border: none;
-            outline: none;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-            cursor: pointer;
-            margin-left: 5px;
-            transition: .5s;
-        }
-
-        button.active {
-            width: 40px;
-            border-radius: 50px;
-            background: #fff;
-        }
-
-        @media (max-width: 800px) {
-            .container {
-                width: 50%;
-                margin: auto;
-            }
-
-            .card {
-                flex-direction: column;
-            }
-
-            .card-thumb {
-                width: 100%;
-                border-radius: 10px;
-            }
-
-            .card-body {
-                width: 100%;
-                min-height: auto;
-                margin-left: 0;
-            }
-        }
     </style>
-    <div class="sidebar">
-        <div class="logo-details">
-            <i class='bx bxs-book-alt icon'></i>
-            <div class="logo_name">Enciclopedia de Animales</div>
-            <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li>
-                <a href="#">
-                    <i class='bx bx-grid-alt'></i>
-                    <span class="links_name">Dashboard</span>
-                </a>
-                <span class="tooltip">Dashboard</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-test-tube'></i>
-                    <span class="links_name">Find</span>
-                </a>
-                <span class="tooltip">Find</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-globe-alt' ></i>
-                    <span class="links_name">Explore</span>
-                </a>
-                <span class="tooltip">Explore</span>
-            </li>
-            <li class="profile">
-                <i class='bx bx-log-out' id="log_out"></i>
-            </li>
-        </ul>
-    </div>
-    <section class="home-section">
-        <div class="text">Dashboard</div>
-
-
-
-        <div class="container">
-            <div class="wrapper">
-                <div class="card">
-                    <div class="card-thumb">
-                        <img src="" class="client-img" alt="">
-                    </div>
-                    <div class="card-body">
-                        <p class="review">Animal Name: 89.775</p>
-                    </div>
-                </div>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bxs-book-alt icon'></i>
+                <div class="logo_name">Enciclopedia de Animales</div>
+                <i class='bx bx-menu' id="btn"></i>
             </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-test-tube'></i>
+                        <span class="links_name">Find</span>
+                    </a>
+                    <span class="tooltip">Find</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-globe-alt' ></i>
+                        <span class="links_name">Explore</span>
+                    </a>
+                    <span class="tooltip">Explore</span>
+                </li>
+                <li class="profile">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                </li>
+            </ul>
+        </div>
+            <form action="" method="POST" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+    <section class="home-section">
+        <div class="text">Find</div>
+
+        <div class="upload">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="image">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="content">
+                        <div class="icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <div class="text">No file chosen, yet!</div>
+                    </div>
+                    <div id="cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="file-name">File name here</div>
+                </div>
+                <div onclick="defaultBtnActive()" id="custom-btn">
+                    Choose a file
+                </div>
+                <input id="default-btn" type="file" hidden name="myfile" />
+
+                <button class="btn">Upload and test</button>
+            </div>
+        </div>
+
 
     </section>
+    </form>
     <script>
+
+
+        const wrapper = document.querySelector(".wrapper");
+        const fileName = document.querySelector(".file-name");
+        const defaultBtn = document.querySelector("#default-btn");
+        const customBtn = document.querySelector("#custom-btn");
+        const cancelBtn = document.querySelector("#cancel-btn i");
+        const img = document.querySelector("img");
+        let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+        function defaultBtnActive() {
+            defaultBtn.click();
+        }
+        defaultBtn.addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const result = reader.result;
+                    img.src = result;
+                    wrapper.classList.add("active");
+                };
+                cancelBtn.addEventListener("click", function () {
+                    img.src = "";
+                    wrapper.classList.remove("active");
+                });
+                reader.readAsDataURL(file);
+            }
+            if (this.value) {
+                let valueStore = this.value.match(regExp);
+                fileName.textContent = valueStore;
+            }
+        });
+
         let sidebar = document.querySelector(".sidebar");
         let closeBtn = document.querySelector("#btn");
         let searchBtn = document.querySelector(".bx-search");
