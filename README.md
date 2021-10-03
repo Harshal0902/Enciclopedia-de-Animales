@@ -22,6 +22,18 @@ Enciclopedia de Animales is an AR-based Animal Encyclopedia, that elucidates the
 - The final accuracy is around 82%
 - The saved model is compact and around just 1.5 MB in size (ready-to-use in low-end compact devices)
 
+### Animals for which the ML model works -
+- dog 
+- horse
+- elephant
+- butterfly
+- chicken
+- cat
+- cow
+- sheep
+- spider
+- squirrel
+
 ## Use of Twilio
 
 - For sending the facts to the email used for registration.
